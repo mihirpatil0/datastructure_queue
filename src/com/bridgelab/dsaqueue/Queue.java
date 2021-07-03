@@ -47,6 +47,27 @@ public class Queue<T>
 	}
 	
 	/**
+	 * Name : deQueue
+	 * 
+	 * Description : Deleting data from the queue.
+	 * 
+	 * @return
+	 * 
+	 * Modification : First commit 02-July-2021
+	 */
+	public T deQueue()
+	{
+		if(front != null)
+		{
+			T result = front.DATA;
+			front = front.next;
+			length--;
+			return result;
+		}
+		return null;
+	}
+	
+	/**
 	 * Name : displayQueue
 	 * 
 	 * Description : Traversing over queue and printing the element inside queque.
